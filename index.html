@@ -7,7 +7,6 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel=stylesheet href="css/home.css"/>
-    <script href="js/home.js"></script>
     </head>
     <body>
         <header>
@@ -104,11 +103,36 @@
           <li><a href="#">Gift Cards &amp; Registry</a></li>
           <li><a href="#">Customer Service</a></li>
           <li><a href="#">Help</a></li>
+          <li><button type="button" id="add-pro" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add product</button></li>
+
         </ul>
       </div>
     </nav>
     </header>
-
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" >&times;</button>
+          <h4 class="modal-title">Enter Product Details</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+        Enter Product Name:<input type="text" id="name" required /><br/><br/>
+        Enter Product Cost:<input type="text" id="cost" required /><br/><br/>
+        Enter Product Dealer:<input type="text" id="dealer" required /><br/><br/>
+        Enter Dealer Location:<input type="text" id="deal-loc" required /><br/><br/>
+        Upload Image:<input type="file" id="img" onchange="loadFile(event)" required /><br/>         
+        <button type="submit" class="btn btn-default" data-dismiss="modal" onclick="add()">Submit</button>
+        </form>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+  
   <section id="promo">
     <div class="container">
       <div class="row">
@@ -219,7 +243,11 @@
       </div>
     </div>
   </section>
-
+<div id="new-products" >
+  <table id="pro-list" class=".col-lg-12">
+    <th><h2>New Products</h2></th>
+  </table>
+</div>
   <footer>
     <div class="top text-center">
       <a href="#nav-top">Back to top</a>
@@ -292,7 +320,8 @@
            </span>
            </a>
            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a><br/>
-        <div class="head">SHOP BY CATEGORY </div><br/>
+        <div class="head">SHOP BY CATEGORY <br/> <button type="button" id="add-pro1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add product</button><br/>
+</div><br/>
      <div class="col-lg-12">
                 <a class="list" href="#" data-toggle="dropdown">Echo and Alexa <i class="fa fa-caret-right" ></i></a>
                 <ul class="dropdown-menu scrollable-menu" role="menu">
@@ -369,19 +398,6 @@
 
 
         </div>
-        
-
-        
-    
-        <script>
-        function openSlideMenu(){
-          document.getElementById('side-menu').style.width = '250px';
-
-        }
-
-        function closeSlideMenu(){
-          document.getElementById('side-menu').style.width = '0';
-        }
-      </script>
+            <script src="js/home.js"></script>
       </body>
 </html>
