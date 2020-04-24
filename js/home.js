@@ -40,7 +40,7 @@
            nam.innerHTML="Product Name: "+name+"";
            td2.innerHTML="Product Cost: Rs."+cost+"";
            td3.innerHTML="Product Dealer : "+dealer+"";
-           td4.innerHTML="Dealer Location : "+"<i class='fa fa-map-marker'><a href='#'>"+deal_loc+"</a>"+">";
+           td4.innerHTML="Dealer Location : "+"<i class='fa fa-map-marker'><a href='#'>"+deal_loc+"</a>"+"";
            td5.innerHTML="Click to Buy <button>Buy</button>"
            img.src=URL.createObjectURL(event.target.files[0]);
            var obj1=new Object();
