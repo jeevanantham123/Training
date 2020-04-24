@@ -694,4 +694,7 @@ footer .bottom a span {
   height: 35px;
   border-radius: 0 4px 4px 0;
 }
+#new-products td{
+  font-size: 10px;
+}
 }
