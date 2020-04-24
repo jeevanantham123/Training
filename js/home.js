@@ -37,11 +37,11 @@
            var but=document.createElement("button");
            img = document.createElement("img"); 
                  
-           nam.innerHTML="<h4>Product Name: "+name+"</h4>";
-           td2.innerHTML="<h4>Product Cost: Rs."+cost+"</h4>";
-           td3.innerHTML="<h4>Product Dealer : "+dealer+"</h4>";
-           td4.innerHTML="<h4>Dealer Location : "+"<i class='fa fa-map-marker'><a href='#'>"+deal_loc+"</a>"+"</h4>";
-           td5.innerHTML="<h4>Click to Buy <button>Buy</button></h4>"
+           nam.innerHTML="Product Name: "+name+"";
+           td2.innerHTML="Product Cost: Rs."+cost+"";
+           td3.innerHTML="Product Dealer : "+dealer+"";
+           td4.innerHTML="Dealer Location : "+"<i class='fa fa-map-marker'><a href='#'>"+deal_loc+"</a>"+">";
+           td5.innerHTML="Click to Buy <button>Buy</button>"
            img.src=URL.createObjectURL(event.target.files[0]);
            var obj1=new Object();
            obj1.name=name;
